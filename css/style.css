@@ -40,7 +40,7 @@ nav {
     padding: 10px 7%;
     /* background-color: var(--or);
     border-radius: 100px; */
-    /* border: 5px solid #F7EFE3;     */
+    /* border: 5px solid #F7EFE3;    */
     /* align-items: center; */
     /* z-index: 10; */
 
@@ -334,7 +334,7 @@ main .about p {
     color: var(--warnaTeks);
     margin-left: 30px;
     font-size: 125%;
-    /* margin-top: 5px;   */
+    /* margin-top: 5px;  */
     margin-bottom: 10px; 
     line-height: 1.3;
 }
@@ -498,7 +498,7 @@ main .dwCV:hover {
 
 .bnykproject div:hover {
     filter: grayscale(0%) drop-shadow(0 8px 8px rgba(0, 0, 0, 0.5));
-    /* transform: translateY(-8px);     */
+    /* transform: translateY(-8px);    */
 }
 
 .bnykproject img {
@@ -672,26 +672,8 @@ footer {
 }
 
 
-/* @media (max-width: 767px) {
-    .bnykproject {
-        display: grid;
-        grid-template-columns: repeat(2. 1fr);
-        gap: 5px;
-    }
-
-    .bnykproject h1 {
-        font-size: 1rem;
-    }
-
-    .bnykproject img {
-        width: 10px;
-        height: ;
-
-    }
-} */
-
 /* =======================================
-   RESPONSIVE STYLES (Smartphone <= 600px) 
+   RESPONSIVE STYLES (Smartphone <= 767px) 
    ======================================= */
 @media only screen and (max-width: 767px) {
 
@@ -735,19 +717,18 @@ footer {
     .nav-bottom {
         justify-content: center;
     }
-
+    
+    /* FIX 3: Memperbaiki posisi ikon kucing agar berada di tengah nav-bottom */
     .logoKucing {
         /* Ukuran Kucing */
         width: 60px; /* Ukuran jauh lebih kecil untuk mobile */
         
         /* Posisi Kucing (Harus di-center di atas nav-bottom yang baru) */
-        position: fixed; /* Pertahankan fixed */
-        bottom: 30px; /* Sesuaikan nilai: (bottom nav + tinggi nav) - offset */
+        position: fixed; 
+        bottom: 30px; 
         
-        /* Posisikan Kucing di tengah navigasi mobile (width 130px) */
-        left: 30px; /* Pindah ke tengah viewport */
-        /* Geser ke kiri setengah lebar kucing (60px / 2 = 30px) */
-        transform: translateX(-50%); 
+        left: 50%; /* NEW: Posisikan di tengah layar */
+        transform: translateX(-50%); /* Geser ke kiri setengah lebar kucing (30px) agar benar-benar di tengah */
     }
     
 .oneBG {
@@ -840,30 +821,32 @@ footer {
     .skills {
         height: auto;
         padding: 40px 5%;
+        /* FIX: Tambahkan ini agar tidak ada scroll horizontal sama sekali */
+        overflow-x: hidden; 
     }
     
+    /* FIX 1: Memperbaiki animasi/scroll horizontal di bagian skills */
     .skills-box {
         display: flex;
-        /* flex-direction: column; Tumpuk ikon keahlian secara vertikal */
-        align-items: center;
+        flex-wrap: wrap; /* NEW: Biarkan item wrap/turun ke baris baru */
+        justify-content: center; /* NEW: Pusatkan item */
         width: 100%;
-        /* height: 10px; */
-        gap: 1em;
+        animation: none; /* NEW: Matikan animasi horizontal scroll */
+        gap: 10px; /* NEW: Tambahkan jarak antar kotak yang wrap */
     }
 
     .skills-box div {
         display: flex;
-        flex-direction: column; /* Ubah ikon dan teks menjadi sejajar */
-        text-align: center;
+        flex-direction: column; 
+        align-items: center;
         justify-content: center;
-        width: 30%; /* Ambil lebar hampir penuh */
-        max-width: 300px;
-        height: 150px; /* Kurangi tinggi */
-        margin: 10px 0;
-        gap: 20px;
-        /* justify-content: flex-start; */
+        /* Ubah basis lebar agar bisa fleksibel dalam 1 baris */
+        width: calc(50% - 10px); /* Contoh: 2 kolom dengan sedikit gap */
+        max-width: none; /* Hapus batasan max-width */
+        height: 150px; 
+        margin: 0; /* Hapus margin yang tidak perlu karena sudah ada gap */
         padding: 20px;
-
+        
         flex-shrink: 0; 
     }
     
@@ -890,9 +873,9 @@ footer {
         padding: 40px 5%;
     }
 
+    /* FIX 2: Mengubah ke 1 kolom dan menghapus lebar fixed yang menyebabkan overflow */
     .bnykproject {
-    /* display: grid; */
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr; /* NEW: 1 kolom penuh di mobile */
         gap: 15px;
     }
     
@@ -902,18 +885,19 @@ footer {
         margin-left: 0;
     }
 
+    /* FLAW FIX: Hapus lebar fixed 240px dan biarkan grid bekerja */
     .bnykproject div {
-        /* filter: grayscale(0%); Nonaktifkan grayscale di mobile */
         filter: grayscale(100%);
         transition-duration: 350ms;
         box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
-        height:190px;
-        width: 240px;
+        height: auto; /* Ubah ke auto agar fleksibel */
+        width: 100%; /* NEW: Ambil lebar grid penuh (1fr) */
+        max-width: none; /* Pastikan tidak ada max-width lain yang mengganggu */
     }
 
     .bnykproject div:hover {
         filter: grayscale(0%) drop-shadow(0 8px 8px rgba(0, 0, 0, 0.5));
-    /* transform: translateY(-8px);     */
+    /* transform: translateY(-8px);    */
     }
     
 
