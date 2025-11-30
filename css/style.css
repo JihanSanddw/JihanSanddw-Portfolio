@@ -819,53 +819,104 @@ footer {
 
     /* --- SKILLS --- */
     .skills {
-        height: auto;
-        padding: 40px 5%;
-        /* FIX: Tambahkan ini agar tidak ada scroll horizontal sama sekali */
-        overflow-x: hidden; 
-    }
-    
-    /* FIX 1: Memperbaiki animasi/scroll horizontal di bagian skills */
-    .skills-box {
-        display: flex;
-        flex-wrap: wrap; /* NEW: Biarkan item wrap/turun ke baris baru */
-        justify-content: center; /* NEW: Pusatkan item */
-        width: 100%;
-        animation: none; /* NEW: Matikan animasi horizontal scroll */
-        gap: 10px; /* NEW: Tambahkan jarak antar kotak yang wrap */
-    }
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    height: 400px;
+    padding: 40px 7%;
+    overflow-x: hidden;
+    overflow-y: hidden; 
+}
 
-    .skills-box div {
-        display: flex;
-        flex-direction: column; 
-        align-items: center;
-        justify-content: center;
-        /* Ubah basis lebar agar bisa fleksibel dalam 1 baris */
-        width: calc(50% - 10px); /* Contoh: 2 kolom dengan sedikit gap */
-        max-width: none; /* Hapus batasan max-width */
-        height: 150px; 
-        margin: 0; /* Hapus margin yang tidak perlu karena sudah ada gap */
-        padding: 20px;
-        
-        flex-shrink: 0; 
-    }
-    
-    .skills-box h2 {
-        padding-left: 0;   
-    }
+.skill-icons {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 50px 0;
+}
 
-    .skill-icons img {
-        width: 60px;
-        height: 60px;
-    }
+.skills-box {
+    /* Pastikan skill box berada dalam satu baris */
+    white-space: nowrap; 
+    /* Diberi lebar yang sangat besar untuk menampung semua skill dan duplikatnya */
+    width: 200%; 
+    /* Gunakan flex-start dan andalkan margin untuk jarak 
+       Ini memastikan konsistensi lebar untuk loop yang mulus. */
+    justify-content: flex-start;
+    display: flex;
+
+    /* PERBAIKAN: Ubah durasi menjadi 40s agar sangat lambat dan halus */
+    animation: spin 20s infinite linear; 
+}
+
+
+.skills {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    height: 400px;
+    padding: 40px 7%;
+    overflow-x: hidden;
+    overflow-y: hidden; 
+}
+
+.skill-icons {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 50px 0;
+}
+
+.skills-box {
+    /* Pastikan skill box berada dalam satu baris */
+    white-space: nowrap; 
+    /* Diberi lebar yang sangat besar untuk menampung semua skill dan duplikatnya */
+    width: 200%; 
+    /* Gunakan flex-start dan andalkan margin untuk jarak 
+       Ini memastikan konsistensi lebar untuk loop yang mulus. */
+    justify-content: flex-start;
+    display: flex;
+
+    /* PERBAIKAN: Ubah durasi menjadi 40s agar sangat lambat dan halus */
+    animation: spin 20s infinite linear; 
+}
+
     
     .skills-box div h2 {
-        font-size: 1em;
-    }
+    color: var(--or);
+    font-size: 1.2em;
+    margin: 0;
+}
 
-    .skill-tx {
-        font-size: 1em;
+.skill-tx {
+    text-align: center;
+    margin-top: 0px;
+    color: var(--warnaTeks);
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.skills-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes spin {
+    /* PERBAIKAN: Gunakan translate3d untuk akselerasi hardware (GPU) yang lebih halus */
+    from {
+        transform: translate3d(0, 0, 0);
     }
+    /* PERBAIKAN: Gunakan translate3d untuk akselerasi hardware (GPU) yang lebih halus */
+    to {
+        transform: translate3d(-50%, 0, 0);
+    }
+}
+
+
 
 
     /* --- PROJECTS --- */
