@@ -1,4 +1,3 @@
-
 :root {
     --warnaBG  : #F7EFE3; 
     --warnaTeks : #1D2333;
@@ -55,10 +54,8 @@ nav .nav-logo {
 }
 
 nav .logo-character {
-    height: 50px; /* Atur tinggi gambar agar sesuai dengan ukuran teks */
+    height: 55px; /* Atur tinggi gambar agar sesuai dengan ukuran teks */
     width: auto; /* Biarkan lebar menyesuaikan proporsi */
-    border-radius: 50px;
-    border: var(--warnaStyle) solid 1px;
     /* backdrop-filter: blur(10px); */
     /* Opsional: Jika gambar memiliki background putih, Anda bisa mencoba filter */
     /* filter: drop-shadow(2px 2px 3px rgba(0,0,0,0.2)); */
