@@ -1,0 +1,1072 @@
+
+:root {
+    --warnaBG  : #F7EFE3; 
+    --warnaTeks : #1D2333;
+    --warnaStyle : #1D2333;
+    --or : #FFFFFF;
+    
+}
+
+* {
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body { 
+    height: 560px; 
+    color: var(--warnaTeks);
+    font-family: 'roboto', sans-serif;
+    background-image: url(/image/Portfolio-Body.png);
+    /* height: 650px; */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+header {
+    /* display: block; */
+    position: fixed;
+    top: 0;
+    z-index: 20;   
+    margin-left: 0px;
+    width: 100%;
+    /* text-align: center; */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 7%;
+    /* background-color: var(--or);
+    border-radius: 100px; */
+    /* border: 5px solid #F7EFE3;     */
+    /* align-items: center; */
+    /* z-index: 10; */
+
+    /* position: relative; */
+}
+
+nav .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+nav .logo-character {
+    height: 50px; /* Atur tinggi gambar agar sesuai dengan ukuran teks */
+    width: auto; /* Biarkan lebar menyesuaikan proporsi */
+    border-radius: 50px;
+    border: var(--warnaStyle) solid 1px;
+    /* backdrop-filter: blur(10px); */
+    /* Opsional: Jika gambar memiliki background putih, Anda bisa mencoba filter */
+    /* filter: drop-shadow(2px 2px 3px rgba(0,0,0,0.2)); */
+}
+
+nav .nav-logo h2 {
+    color: var(--warnaTeks);
+}
+
+nav .nav-item {
+    /* text-decoration: none; */
+    display: flex;
+    justify-content: center;
+    /* width: 100%; */
+    gap: 30px;
+    padding: 10px 0; 
+    /* margin-left: 483px; */
+}
+
+nav .nav-item a {
+    color: var(--warnaTeks);
+    text-decoration: none;
+    /* padding: 10px; */
+    font-weight: bold;
+    /* margin-left: 30px; */
+}
+
+nav .nav-item i {
+    display: none;
+    font-size: 20px;
+    justify-content: center;
+}
+
+nav #menu-item .nav-item {
+    text-decoration: none;
+}
+
+nav .nav-item a:hover {
+    color: #002079;
+}
+
+nav .menu-icon {
+    display: none;
+    font-size: 25px;
+    /* display: flex; */
+    align-items: center;
+}
+
+nav #navbar a {
+    color: var(--warnaTeks);
+    text-decoration: none;
+    /* padding: 10px; */
+    font-weight: bold;
+    /* margin-left: 30px; */
+    /* display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: flex-start; */
+    display: block;
+    padding: 10px 20px; /* Tambahkan padding agar ada ruang di sekitar teks,
+                           terutama padding kiri/kanan. */
+    width: 100%; /* Pastikan link menempati seluruh lebar container navbar */
+    box-sizing: border-box; /* Memastikan padding tidak menambah total lebar */
+}
+
+nav .top-navbar {
+    display: flex;
+    padding: 10px 0;
+    /* background-color: var(--or); */
+    backdrop-filter: blur(10px);
+}
+
+nav .top-navbar i {
+    /* display: none; */
+    font-size: 20px;
+    padding-top: 18px;
+    margin-left: 35px;
+}
+
+nav #navbar h2 {    
+    padding: 10px 20px;
+}
+
+nav #navbar {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: blur var(--or);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.2);
+}
+
+@media only screen and (max-width: 767px) {
+    
+}
+
+
+main .nav-bottom {
+    position: fixed;
+    bottom: 70px;
+    background-color: var(--warnaStyle);
+    padding: 10px 0;
+    z-index: 1000;
+    display: flex;
+    border-radius: 50px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 150px;
+    left: 95px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: color 0.3s;
+    justify-content: space-around;
+    align-items: center;
+}
+
+main .nav-bottom a {
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+    /* justify-content: space-between; */
+}
+
+main .nav-bottom i {
+    /* Padding kecil agar area klik lebih nyaman */
+    padding: 0 5px; 
+}
+
+.logoKucing{
+    /* Gunakan fixed agar posisi tetap di viewport seperti navigasi */
+    position: fixed; 
+    
+    /* Ukuran Kucing */
+    width: 100px; /* Sesuaikan! Misalnya 80px */
+    height: auto;
+    
+    /* Posisikan Kucing */
+    /* bottom: Atur lebih rendah dari navigasi. Jika navigasi 70px, 
+       dan lebar navigasi sekitar 40px, kita bisa coba bottom 10px. */
+    bottom: 108px; /* Sesuaikan nilai ini */
+    
+    /* left: Harus disesuaikan agar kucing berada di bawah navigasi. 
+       Navigasi dimulai dari left: 95px.
+       Kita ingin kucing (80px) berada di bawahnya (150px) secara center.
+       Perhitungannya: (Left Navigasi) + ((Lebar Navigasi - Lebar Kucing) / 2)
+       95px + ((150px - 80px) / 2) = 95px + 35px = 130px
+    */
+    left: 100px; /* Nilai yang dihitung agar center dengan navigasi. Sesuaikan! */
+    
+    /* Pastikan kucing berada di lapisan yang benar (opsional) */
+    z-index: 999; 
+    
+    /* Efek Transisi untuk kemulusan */
+    transition: all 0.3s;
+}
+
+main .nav-bottom a :hover {
+    color: var(--or);
+}
+
+nav .sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: var(--or);
+    /* backdrop-filter: blur(10px); */
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.2 );
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+nav .sidebar a {
+    width: 100%;
+}
+
+main .home {
+    /* min-height: auto; */
+    /* text-align: left; */
+    /* padding: 18%; */
+    padding: 23% 7%;
+    /* background-color: var(--warnaBG);    */
+    position: relative;
+}
+
+main i {
+    color: var(--or);
+    font-size: 1.5rem;
+    padding: 0 5px;
+    padding-left: 15px;
+    
+}
+
+.JSD {
+    font-size: 3rem;
+    color: var(--warnaStyle);
+    margin-top: 10px;
+}
+
+.PW {
+    font-size: 1.2rem;
+    color: var(--warnaStyle);
+}
+
+main .about {
+    /* background-image: url(/assets/image.png); */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 1;
+    height: 675px;
+    
+}
+
+main .about-box {
+    background-color: var(--or);
+    position: absolute;
+    padding: 40px;
+    border-radius: 60px;
+    max-width: 1090px;
+    top: 40px;
+    right: 40px;
+    bottom: 40px;
+    left: 40px;
+    margin: 50px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    color: var(--warnaBG);
+    z-index: 2;
+    margin-left: 108px;
+    margin-bottom: 0;
+    display: flex;
+    gap: 30px;
+    align-items: start;
+    
+}
+
+.aboutImg img {
+    /* Atur agar gambar mengisi ruang yang tersisa di sebelah kanan */
+    width: 25em; /* Sesuaikan persentase ini sesuai keinginan Anda */
+    /* max-width: px; Batasi ukuran maksimal gambar */
+    height: auto;
+    /* Membuat gambar tampak rapi di dalam box */
+    border-radius: 30px; 
+    /* Pastikan gambar tidak berubah bentuk */
+    object-fit: cover; 
+    /* Menggeser gambar agar tidak terlalu ke bawah */
+    margin-top: 30px; /* Sesuaikan nilai ini */
+    /* Opsional: Efek bayangan */
+    margin-right: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-content {
+    /* Atur agar konten teks mengambil sisa ruang yang dibutuhkan */
+    flex-grow: 1;
+    /* Tambahkan padding kanan agar teks tidak terlalu dekat dengan gambar (opsional) */
+    padding-right: 20px; 
+}
+
+main .about h1 {
+    margin-left: 30px;
+    color: var(--warnaTeks);
+    /* position: absolute; */
+    font-size: 300%;
+}
+
+main .about p {
+    color: var(--warnaTeks);
+    margin-left: 30px;
+    font-size: 125%;
+    /* margin-top: 5px;   */
+    margin-bottom: 10px; 
+    line-height: 1.3;
+}
+
+main .about p + p {
+    margin-top: 20px;
+}
+
+
+main .cvBtn {
+    margin-left: 30px;
+    padding: 20px 0;
+}
+
+main .dwCV {
+    background-color: var(--warnaStyle);
+    color: var(--or);
+    /* border: 1px solid maroon; */
+    padding: 15px 22px;font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.5s;
+    filter: drop-shadow(0px 0px 10px rgba(0 0 0 / 50%))
+    /* transition: color 0.3s; */
+}
+
+main .dwCV:hover {
+    background-color: black;
+}
+
+.oneBG {
+    background-image: url(/image/GABISAGUEGABISAAA.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* height: 10px; */
+}
+
+.skills {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    height: 400px;
+    padding: 40px 7%;
+    overflow-x: hidden;
+    overflow-y: hidden; 
+}
+
+.skill-icons {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 50px 0;
+}
+
+.skills-box {
+    /* Pastikan skill box berada dalam satu baris */
+    white-space: nowrap; 
+    /* Diberi lebar yang sangat besar untuk menampung semua skill dan duplikatnya */
+    width: 200%; 
+    /* Gunakan flex-start dan andalkan margin untuk jarak 
+       Ini memastikan konsistensi lebar untuk loop yang mulus. */
+    justify-content: flex-start;
+    display: flex;
+
+    /* PERBAIKAN: Ubah durasi menjadi 40s agar sangat lambat dan halus */
+    animation: spin 7s infinite linear; 
+}
+
+.skills-box ::-webkit-scrollbar {
+    display: none;
+}
+
+.skill-icons img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 5px;
+}
+
+.skills-box div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--warnaStyle);
+    width: 200px;
+    height: 200px;
+    padding: 10px;
+    margin: 10px 20px; 
+    transition: all 350ms ease;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.100);
+
+    /* Gunakan flex-shrink: 0 agar kotak skill tidak menciut */
+    flex-shrink: 0; 
+}
+
+.skills-box div:hover {
+    box-shadow: 0px 8px 10px 1px rgba(0, 0, 0, 0.5);
+    transform: translateY(-8px);
+}
+
+.skills-box div h2 {
+    color: var(--or);
+    font-size: 1.2em;
+    margin: 0;
+}
+
+.skill-tx {
+    text-align: center;
+    margin-top: 0px;
+    color: var(--warnaTeks);
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.skills-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes spin {
+    /* PERBAIKAN: Gunakan translate3d untuk akselerasi hardware (GPU) yang lebih halus */
+    from {
+        transform: translate3d(0, 0, 0);
+    }
+    /* PERBAIKAN: Gunakan translate3d untuk akselerasi hardware (GPU) yang lebih halus */
+    to {
+        transform: translate3d(-50%, 0, 0);
+    }
+}
+
+.projects {
+    /* background-image: url(/image/BISMILLAH.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; */
+    /* background-image: url(/assets/image.png); */
+    color: var(--warnaTeks);
+    padding: 80px;
+    /* height: 670px; */
+}
+
+.bnykproject {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px;
+}
+
+.bnykproject div {
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    filter: grayscale(100%);
+    transition-duration: 350ms;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+}
+
+.bnykproject div:hover {
+    filter: grayscale(0%) drop-shadow(0 8px 8px rgba(0, 0, 0, 0.5));
+    /* transform: translateY(-8px);     */
+}
+
+.bnykproject img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.bnykproject h1 {
+    font-size: 5rem;
+    margin-top: 8px;
+    margin-left: 10px;
+    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.3))
+}
+
+.contact {
+    /* height: 680px; */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 1;
+    padding-bottom: 20px;
+}
+
+.contact-box {
+    padding-top: 10px;
+    display: flex;
+    max-width: 1000px;
+    width: 100%;
+    margin: auto;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    color: var(--warnaStyle);
+    border-radius: 20px;
+    overflow: hidden;   
+}
+
+.contact-info {
+    background-color: var(--warnaStyle);
+    color: var(--or);
+    padding: 40px;
+    display: flex;
+    flex: 1; 
+    flex-direction: column;
+    justify-content: space-between; 
+}
+
+.contact-info h2 {
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.contact form {
+    flex: 2; 
+    background-color: var(--or);
+    padding: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; 
+}
+
+.contact-form .form-group {
+    display: flex;
+    flex-direction: column; 
+}
+
+.contact-form .half-width {
+    flex: 1 1 47.5%;
+}
+
+.contact-form label {
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.contact form input, .contact form textarea {
+    width: 100%; 
+    padding: 15px; 
+    border: none;
+    /* background-color: var(--warnaStyle); */
+    border-radius: 5px;
+    outline: none; 
+    font-size: 1rem;
+    border-bottom: 1px solid var(--warnaStyle);
+    /* color: var(--warnaBG); */
+}
+
+.contact form input[type="text"],
+.contact form input[type="email"] {
+    flex: 1 1 45%; 
+}
+
+.contact form textarea {
+    resize: none; 
+    height: 100px; 
+}
+
+.contact form button {
+    background-color: var(--warnaStyle);
+    color: var(--or);
+    border: none;
+    padding: 12px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+    margin-top: 20px;
+}
+
+.contact form button:hover {
+    background-color: var(--warnaStyle); 
+    transform: translateY(-2px);
+}
+
+footer {
+    /* background-image: url(/image/backgrouncAll3.2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; */
+    backdrop-filter: blur(5px);
+    padding: 40px;
+    color: var(--warnaStyle);
+    /* background: transparent; */
+    padding-bottom: 22px;
+}
+
+.futer  {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 7%;   
+    
+}
+
+.foot h2 {
+    font-size: 30px;
+}
+
+.foot a {
+    font-size: large;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--warnaStyle);
+}
+
+.foot a {
+    display: block;
+    margin-top: 10px;
+}
+
+.footOne h2 {
+    margin-bottom: 10px;
+    font-size: 30px;
+}
+
+.footOne a {
+    text-decoration: none;
+    color: var(--warnaStyle);
+    font-size: 30px;
+}
+
+
+/* @media (max-width: 767px) {
+    .bnykproject {
+        display: grid;
+        grid-template-columns: repeat(2. 1fr);
+        gap: 5px;
+    }
+
+    .bnykproject h1 {
+        font-size: 1rem;
+    }
+
+    .bnykproject img {
+        width: 10px;
+        height: ;
+
+    }
+} */
+
+/* =======================================
+   RESPONSIVE STYLES (Smartphone <= 600px) 
+   ======================================= */
+@media only screen and (max-width: 600px) {
+
+    /* --- GLOBAL / NAV --- */
+    body {
+        /* background-image: url(/image/backgrouncAll.jpg); */ 
+        background-attachment: scroll;
+        min-height: auto;
+    }
+
+    nav {
+        padding: 10px 5%;
+    }
+
+    nav .top-navbar i {
+        display: flex;
+    }
+
+    nav .nav-item i {
+        display: flex;
+    }
+
+    nav .menu-icon {
+        display: block; /* Tampilkan ikon menu */
+    }
+
+    nav .nav-item a {
+        /* Sembunyikan menu navigasi desktop, hanya akan ditampilkan via JS ketika ikon diklik */
+        display: none; 
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        background-color: var(--warnaBG); /* Latar belakang untuk menu mobile */
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        padding: 10px 5%;
+        gap: 10px;
+    }
+
+    .nav-bottom {
+        justify-content: center;
+    }
+
+    .logoKucing {
+        /* Ukuran Kucing */
+        width: 60px; /* Ukuran jauh lebih kecil untuk mobile */
+        
+        /* Posisi Kucing (Harus di-center di atas nav-bottom yang baru) */
+        position: fixed; /* Pertahankan fixed */
+        bottom: 30px; /* Sesuaikan nilai: (bottom nav + tinggi nav) - offset */
+        
+        /* Posisikan Kucing di tengah navigasi mobile (width 130px) */
+        left: 30px; /* Pindah ke tengah viewport */
+        /* Geser ke kiri setengah lebar kucing (60px / 2 = 30px) */
+        transform: translateX(-50%); 
+    }
+    
+.oneBG {
+    background-image: url(/image/backgrouncAll.jpg);
+    background-size: 100%;
+    background-position: bottom;
+}
+
+    /* --- HOME --- */
+    main .home {
+        padding: 40% 5% 10% 5%; /* Tambahkan padding atas yang lebih besar untuk menghindari header */
+        text-align: center;
+        min-height: auto;
+    }
+
+    .JSD {
+        font-size: 2.2rem;
+    }
+
+    .PW {
+        font-size: 1rem;
+    }
+
+    main .nav-bottom {
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%); /* Posisikan di tengah */
+        width: 130px;
+        padding: 8px 0;
+    }
+    
+    main i {
+        font-size: 1.2rem;
+        padding-left: 10px;
+    }
+
+    /* --- ABOUT --- */
+    main .about {
+            height: auto; 
+            padding: 40px 5%; /* Gunakan padding persentase untuk responsivitas */
+        }
+
+    main .about-box {
+        position: static; /* PENTING: Hapus absolute positioning */
+        margin: 0;
+        padding: 20px;
+        border-radius: 20px;
+        
+        /* PENTING: Tumpuk konten dan gambar secara vertikal */
+        flex-direction: column; 
+        align-items: center; /* Pusatkan item saat ditumpuk */
+    }
+    
+    .about-content {
+        width: 100%;
+        padding-right: 0; /* Hapus padding kanan yang tidak diperlukan lagi */
+    }
+    
+    main .about h1, 
+    main .about p, 
+    main .cvBtn {
+        /* Hapus margin-left yang besar, gunakan text-align atau margin kecil */
+        margin-left: 0;
+        text-align: center; /* Pusatkan teks */
+    }
+    
+    main .about h1 {
+        font-size: 2rem;
+        /* margin-bottom: 8px; */
+    }
+
+    main .about p {
+        font-size: 1rem;
+        /* margin-top: 10px; */
+        text-align: left; /* Teks tetap lebih baik rata kiri */
+    }
+    
+    /* PENTING: Sembunyikan atau kecilkan gambar secara signifikan di mobile */
+    .aboutImg {
+        display: none; /* Menyembunyikan gambar untuk menghemat ruang */
+        /* Alternatif: */
+        /* width: 100%; */
+    }
+    
+    .aboutImg img {
+        display: none; /* Pastikan gambar disembunyikan */
+    }
+
+    /* --- SKILLS --- */
+    .skills {
+        height: auto;
+        padding: 40px 5%;
+    }
+    
+    .skills-box {
+        display: flex;
+        /* flex-direction: column; Tumpuk ikon keahlian secara vertikal */
+        align-items: center;
+        width: 100%;
+        /* height: 10px; */
+        gap: 1em;
+    }
+
+    .skills-box div {
+        display: flex;
+        flex-direction: column; /* Ubah ikon dan teks menjadi sejajar */
+        text-align: center;
+        justify-content: center;
+        width: 30%; /* Ambil lebar hampir penuh */
+        max-width: 300px;
+        height: 150px; /* Kurangi tinggi */
+        margin: 10px 0;
+        gap: 20px;
+        /* justify-content: flex-start; */
+        padding: 20px;
+        
+    }
+    
+    .skills-box h2 {
+        padding-left: 0;   
+    }
+
+    .skill-icons img {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .skills-box div h2 {
+        font-size: 1em;
+    }
+
+    .skill-tx {
+        font-size: 1em;
+    }
+
+
+    /* --- PROJECTS --- */
+    .projects {
+        padding: 40px 5%;
+    }
+
+    .bnykproject {
+    /* display: grid; */
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    
+    .bnykproject h1 {
+        font-size: 3rem;
+        text-align: center;
+        margin-left: 0;
+    }
+
+    .bnykproject div {
+        /* filter: grayscale(0%); Nonaktifkan grayscale di mobile */
+        filter: grayscale(100%);
+        transition-duration: 350ms;
+        box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+        height:190px;
+        width: 240px;
+    }
+
+    .bnykproject div:hover {
+        filter: grayscale(0%) drop-shadow(0 8px 8px rgba(0, 0, 0, 0.5));
+    /* transform: translateY(-8px);     */
+    }
+    
+
+
+    /* --- CONTACT --- */
+    .contact {
+        padding: 40px 5% 20px 5%;
+    }
+    
+    .contact-box {
+        flex-direction: column; /* Tumpuk info dan form secara vertikal */
+        border-radius: 20px;
+    }
+    
+    .contact-info {
+        padding: 30px;
+    }
+
+    .contact form {
+        padding: 30px;
+    }
+    
+    .contact-form .half-width {
+        flex: 1 1 100%; /* Buat input nama dan email menjadi satu kolom penuh */
+    }
+    
+    .contact-info div {
+        display: none;
+    }
+    
+    /* --- FOOTER --- */
+    footer {
+        padding: 20px 5%;
+    }
+    
+    .futer {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .footOne h2, .foot h2 {
+        font-size: 24px;
+    }
+    
+    .footOne a {
+        font-size: 20px;
+    }
+    
+    .foot {
+        display: none;
+    }
+}
+
+/* Media Query untuk Tablet (601px - 1024px) - Penyesuaian opsional */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    /* Penyesuaian untuk tampilan tablet */
+    .home {
+        text-align: center;
+    }
+
+    .logoKucing {
+        width: 80px; /* Kecilkan sedikit agar proporsional di tablet */
+        bottom: 100px; /* Sesuaikan posisi agar tetap 'duduk' di atas nav-bottom */
+        left: 95px; /* Pertahankan left 95px jika nav-bottom tidak di-center */
+    }
+
+    .bnykproject {
+        grid-template-columns: repeat(3, 1fr); /* 2 kolom di tablet */
+    }
+
+    .bnykproject h1 {
+        font-size: 3rem;
+    }
+    
+    main .about {
+            height: auto; /* Biarkan konten menentukan tinggi */
+            padding: 40px 3%; /* Sedikit padding di sisi */
+        }
+    
+    main .about-box {
+        /* PENTING: Hapus absolute positioning */
+        position: static; 
+        max-width: 100%;
+        margin: 0 auto; /* Pusatkan box */
+        top: auto; 
+        right: auto;
+        bottom: auto;
+        left: auto;
+        /* margin-left, margin-bottom dihapus karena sudah ada margin: 0 auto */
+        
+        padding: 30px;
+        border-radius: 40px;
+        
+        /* Biarkan Flexbox berjalan (display: flex;) */
+        flex-direction: row; /* Tetap sejajar */
+        gap: 20px;
+        align-items: flex-start;
+    }
+    
+    .about-content {
+        flex-basis: 60%; /* Berikan porsi lebih banyak untuk teks */
+        padding-right: 10px;
+    }
+    
+    .aboutImg {
+        flex-basis: 40%; /* Berikan porsi untuk gambar */
+        display: flex; /* Aktifkan flex pada container gambar */
+        justify-content: center;
+    }
+    
+    .aboutImg img {
+        /* Gunakan ukuran relatif pada container agar responsif */
+        width: 100%; 
+        max-width: 300px; /* Batasi ukuran maksimal gambar */
+        height: auto;
+        /* margin-top: 15px ; Kurangi margin top */
+        margin-right: 0;
+        border-radius: 20px;
+    }
+    
+    main .about h1, 
+    main .about p, 
+    main .cvBtn {
+        margin-left: 10px; /* Sesuaikan margin kiri agar tidak terlalu jauh */
+    }
+    
+    main .about h1 {
+        font-size: 2.5rem;
+    }
+    
+    main .about p {
+        font-size: 110%;
+    }
+
+    .skills-box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .skills-box div {
+        /* width: 40%; */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        max-width: 200px;    
+    }
+    
+    .contact-box {
+        max-width: 95%;
+    }
+}
