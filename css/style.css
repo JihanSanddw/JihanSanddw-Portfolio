@@ -38,6 +38,8 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 10px 7%;
+    backdrop-filter: blur(2px);
+    border-radius: 50px;
     /* background-color: var(--or);
     border-radius: 100px; */
     /* border: 5px solid #F7EFE3;    */
@@ -115,9 +117,8 @@ nav #navbar a {
     align-items: start;
     justify-content: flex-start; */
     display: block;
-    padding: 10px 20px; /* Tambahkan padding agar ada ruang di sekitar teks,
-                           terutama padding kiri/kanan. */
-    width: 100%; /* Pastikan link menempati seluruh lebar container navbar */
+    padding: 10px 20px;
+    width: 100%;
     box-sizing: border-box; /* Memastikan padding tidak menambah total lebar */
 }
 
@@ -148,12 +149,8 @@ nav #navbar {
     height: 100vh;
     width: 250px;
     z-index: 999;
-    background-color: blur var(--or);
+    background-color: var(--or);
     box-shadow: -10px 0 10px rgba(0, 0, 0, 0.2);
-}
-
-@media only screen and (max-width: 767px) {
-    
 }
 
 
@@ -183,34 +180,18 @@ main .nav-bottom a {
 }
 
 main .nav-bottom i {
-    /* Padding kecil agar area klik lebih nyaman */
     padding: 0 5px; 
 }
 
 .logoKucing{
-    /* Gunakan fixed agar posisi tetap di viewport seperti navigasi */
     position: fixed; 
-    
     /* Ukuran Kucing */
-    width: 100px; /* Sesuaikan! Misalnya 80px */
+    width: 100px; 
     height: auto;
-    
-    /* Posisikan Kucing */
-    /* bottom: Atur lebih rendah dari navigasi. Jika navigasi 70px, 
-       dan lebar navigasi sekitar 40px, kita bisa coba bottom 10px. */
-    bottom: 108px; /* Sesuaikan nilai ini */
-    
-    /* left: Harus disesuaikan agar kucing berada di bawah navigasi. 
-       Navigasi dimulai dari left: 95px.
-       Kita ingin kucing (80px) berada di bawahnya (150px) secara center.
-       Perhitungannya: (Left Navigasi) + ((Lebar Navigasi - Lebar Kucing) / 2)
-       95px + ((150px - 80px) / 2) = 95px + 35px = 130px
-    */
-    left: 100px; /* Nilai yang dihitung agar center dengan navigasi. Sesuaikan! */
-    
-    /* Pastikan kucing berada di lapisan yang benar (opsional) */
+    /* Posisi Kucing */
+    bottom: 33px; 
+    left: 25px; 
     z-index: 999; 
-    
     /* Efek Transisi untuk kemulusan */
     transition: all 0.3s;
 }
@@ -233,6 +214,7 @@ nav .sidebar {
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
+    
 }
 
 nav .sidebar a {
@@ -1012,8 +994,8 @@ footer {
 
     .logoKucing {
         width: 80px; /* Kecilkan sedikit agar proporsional di tablet */
-        bottom: 100px; /* Sesuaikan posisi agar tetap 'duduk' di atas nav-bottom */
-        left: 95px; /* Pertahankan left 95px jika nav-bottom tidak di-center */
+        bottom: 40px; /* Sesuaikan posisi agar tetap 'duduk' di atas nav-bottom */
+        left:40px; /* Pertahankan left 95px jika nav-bottom tidak di-center */
     }
 
     .bnykproject {

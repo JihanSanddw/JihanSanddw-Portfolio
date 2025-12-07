@@ -243,7 +243,7 @@
                             <div class="info-item">Taruna Bhakti, Depok</div>
                         </div>
                         
-                        <form action="https://formspree.io/f/xanvgarv" method="post" class="contact-form">
+                        <form id="contactForm" action="https://formspree.io/f/xanvgarv" method="post" class="contact-form" >
                             <div class="form-group half-width">
                                 <label for="inputNama">Your Name</label>
                                 <input type="text" name="Nama" placeholder="Your Name" id="inputNama" required> 
@@ -255,10 +255,10 @@
                             </div>
                         
                             <label for="inputMessaeg">Your Message</label>
-                            <textarea name="Pesan" cols="20" rows="3" placeholder="Write here your message" required></textarea>
+                            <textarea name="Pesan" cols="20" rows="3" placeholder="Write here your message" id="sendMessage" required></textarea>
                         
                             <input type="hidden" name="-format" value="plain">
-                            <button type="submit">Send Message</button>
+                            <button id="btn" type="submit">Send Message</button>
                         </form>
                     </div>
                 </section>
