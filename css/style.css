@@ -335,7 +335,8 @@ main .dwCV {
     background-color: var(--warnaStyle);
     color: var(--or);
     /* border: 1px solid maroon; */
-    padding: 15px 22px;font-weight: bold;
+    padding: 15px 22px;
+    font-weight: bold;
     border: none;
     border-radius: 20px;
     cursor: pointer;
