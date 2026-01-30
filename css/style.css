@@ -56,8 +56,8 @@ nav .nav-logo {
 }
 
 nav .logo-character {
-    height: 55px; /* Atur tinggi gambar agar sesuai dengan ukuran teks */
-    width: auto; /* Biarkan lebar menyesuaikan proporsi */
+    height: 55px;
+    width: auto; 
     /* backdrop-filter: blur(10px); */
     /* Opsional: Jika gambar memiliki background putih, Anda bisa mencoba filter */
     /* filter: drop-shadow(2px 2px 3px rgba(0,0,0,0.2)); */
@@ -119,7 +119,7 @@ nav #navbar a {
     display: block;
     padding: 10px 20px;
     width: 100%;
-    box-sizing: border-box; /* Memastikan padding tidak menambah total lebar */
+    box-sizing: border-box; 
 }
 
 nav .top-navbar {
@@ -274,7 +274,7 @@ main .about-box {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     color: var(--warnaBG);
     z-index: 2;
-    margin-left: 108px;
+    margin-left: 108px; 
     margin-bottom: 0;
     display: flex;
     gap: 30px;
@@ -283,25 +283,17 @@ main .about-box {
 }
 
 .aboutImg img {
-    /* Atur agar gambar mengisi ruang yang tersisa di sebelah kanan */
-    width: 25em; /* Sesuaikan persentase ini sesuai keinginan Anda */
-    /* max-width: px; Batasi ukuran maksimal gambar */
+    width: 25em; 
     height: auto;
-    /* Membuat gambar tampak rapi di dalam box */
     border-radius: 30px; 
-    /* Pastikan gambar tidak berubah bentuk */
     object-fit: cover; 
-    /* Menggeser gambar agar tidak terlalu ke bawah */
-    margin-top: 30px; /* Sesuaikan nilai ini */
-    /* Opsional: Efek bayangan */
+    margin-top: 30px; 
     margin-right: 30px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .about-content {
-    /* Atur agar konten teks mengambil sisa ruang yang dibutuhkan */
-    flex-grow: 1;
-    /* Tambahkan padding kanan agar teks tidak terlalu dekat dengan gambar (opsional) */
+    /* flex-grow: 1; */
     padding-right: 20px; 
 }
 
@@ -376,17 +368,11 @@ main .dwCV:hover {
 }
 
 .skills-box {
-    /* Pastikan skill box berada dalam satu baris */
     white-space: nowrap; 
-    /* Diberi lebar yang sangat besar untuk menampung semua skill dan duplikatnya */
-    width: 200%; 
-    /* Gunakan flex-start dan andalkan margin untuk jarak 
-       Ini memastikan konsistensi lebar untuk loop yang mulus. */
+    width: auto;
     justify-content: flex-start;
     display: flex;
-
-    /* PERBAIKAN: Ubah durasi menjadi 40s agar sangat lambat dan halus */
-    animation: spin 20s infinite linear; 
+    animation: spin 50s infinite linear; 
 }
 
 .skills-box ::-webkit-scrollbar {
@@ -411,8 +397,6 @@ main .dwCV:hover {
     margin: 10px 20px; 
     transition: all 350ms ease;
     box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.100);
-
-    /* Gunakan flex-shrink: 0 agar kotak skill tidak menciut */
     flex-shrink: 0; 
 }
 
@@ -443,12 +427,10 @@ main .dwCV:hover {
 }
 
 @keyframes spin {
-    /* PERBAIKAN: Gunakan translate3d untuk akselerasi hardware (GPU) yang lebih halus */
-    from {
+    0% {
         transform: translate3d(0, 0, 0);
     }
-    /* PERBAIKAN: Gunakan translate3d untuk akselerasi hardware (GPU) yang lebih halus */
-    to {
+    100% {
         transform: translate3d(-50%, 0, 0);
     }
 }
@@ -570,7 +552,7 @@ main .dwCV:hover {
 
 .contact form input, .contact form textarea {
     width: 100%; 
-    padding: 15px; 
+    padding: 15px;                     
     border: none;
     /* background-color: var(--warnaStyle); */
     border-radius: 5px;
@@ -655,12 +637,9 @@ footer {
 }
 
 
-/* =======================================
-   RESPONSIVE STYLES (Smartphone <= 767px) 
-   ======================================= */
+/* Responsive Smartphone */
 @media only screen and (max-width: 767px) {
 
-    /* --- GLOBAL / NAV --- */
     body {
         /* background-image: url(/image/backgrouncAll.jpg); */ 
         background-attachment: scroll;
@@ -680,7 +659,7 @@ footer {
     }
 
     nav .menu-icon {
-        display: block; /* Tampilkan ikon menu */
+        display: block; 
     }
 
     nav .nav-item a {
@@ -691,7 +670,7 @@ footer {
         position: absolute;
         top: 50px;
         left: 0;
-        background-color: var(--warnaBG); /* Latar belakang untuk menu mobile */
+        background-color: var(--warnaBG);
         box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         padding: 10px 5%;
         gap: 10px;
@@ -701,17 +680,15 @@ footer {
         justify-content: center;
     }
     
-    /* FIX 3: Memperbaiki posisi ikon kucing agar berada di tengah nav-bottom */
     .logoKucing {
         /* Ukuran Kucing */
-        width: 60px; /* Ukuran jauh lebih kecil untuk mobile */
+        width: 60px; 
         
-        /* Posisi Kucing (Harus di-center di atas nav-bottom yang baru) */
         position: fixed; 
         bottom: 30px; 
         
-        left: 50%; /* NEW: Posisikan di tengah layar */
-        transform: translateX(-50%); /* Geser ke kiri setengah lebar kucing (30px) agar benar-benar di tengah */
+        left: 50%; 
+        transform: translateX(-50%); 
     }
     
 .oneBG {
@@ -720,9 +697,8 @@ footer {
     background-position: bottom;
 }
 
-    /* --- HOME --- */
     main .home {
-        padding: 40% 5% 10% 5%; /* Tambahkan padding atas yang lebih besar untuk menghindari header */
+        padding: 40% 5% 10% 5%; 
         text-align: center;
         min-height: auto;
     }
@@ -738,8 +714,7 @@ footer {
     main .nav-bottom {
         bottom: 20px;
         left: 50%;
-        transform: translateX(-50%); /* Posisikan di tengah */
-        width: 130px;
+        transform: translateX(-50%); 
         padding: 8px 0;
     }
     
@@ -748,34 +723,31 @@ footer {
         padding-left: 10px;
     }
 
-    /* --- ABOUT --- */
     main .about {
             height: auto; 
-            padding: 40px 5%; /* Gunakan padding persentase untuk responsivitas */
+            padding: 40px 5%;
         }
 
     main .about-box {
-        position: static; /* PENTING: Hapus absolute positioning */
+        position: static; 
         margin: 0;
         padding: 20px;
         border-radius: 20px;
         
-        /* PENTING: Tumpuk konten dan gambar secara vertikal */
         flex-direction: column; 
-        align-items: center; /* Pusatkan item saat ditumpuk */
+        align-items: center; 
     }
     
     .about-content {
         width: 100%;
-        padding-right: 0; /* Hapus padding kanan yang tidak diperlukan lagi */
+        padding-right: 0; 
     }
     
     main .about h1, 
     main .about p, 
     main .cvBtn {
-        /* Hapus margin-left yang besar, gunakan text-align atau margin kecil */
         margin-left: 0;
-        text-align: center; /* Pusatkan teks */
+        text-align: center; 
     }
     
     main .about h1 {
@@ -786,130 +758,87 @@ footer {
     main .about p {
         font-size: 1rem;
         /* margin-top: 10px; */
-        text-align: left; /* Teks tetap lebih baik rata kiri */
+        text-align: left; 
     }
     
-    /* PENTING: Sembunyikan atau kecilkan gambar secara signifikan di mobile */
     .aboutImg {
-        display: none; /* Menyembunyikan gambar untuk menghemat ruang */
-        /* Alternatif: */
+        display: none; 
         /* width: 100%; */
     }
     
     .aboutImg img {
-        display: none; /* Pastikan gambar disembunyikan */
+        display: none; 
     }
 
-    /* --- SKILLS --- */
     .skills {
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: relative;
-    height: 400px;
-    padding: 40px 7%;
-    overflow-x: hidden;
-    overflow-y: hidden; 
-}
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative;
+        height: 400px;
+        padding: 40px 5%;
+        overflow-x: hidden;
+        overflow-y: hidden; 
+    }
 
-.skill-icons {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    padding: 50px 0;
-}
+    .skill-icons {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        padding: 50px 0;
+    }
 
-.skills-box {
-    /* Pastikan skill box berada dalam satu baris */
-    white-space: nowrap; 
-    /* Diberi lebar yang sangat besar untuk menampung semua skill dan duplikatnya */
-    width: 200%; 
-    /* Gunakan flex-start dan andalkan margin untuk jarak 
-       Ini memastikan konsistensi lebar untuk loop yang mulus. */
-    justify-content: flex-start;
-    display: flex;
+    .skills-box {
+        white-space: nowrap; 
+        width: auto;
+        justify-content: flex-start;
+        display: flex;
+        animation: spin 70s infinite linear; 
+    }
 
-    /* PERBAIKAN: Ubah durasi menjadi 40s agar sangat lambat dan halus */
-    animation: spin 20s infinite linear; 
-}
-
-
-.skills {
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: relative;
-    height: 400px;
-    padding: 40px 7%;
-    overflow-x: hidden;
-    overflow-y: hidden; 
-}
-
-.skill-icons {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    padding: 50px 0;
-}
-
-.skills-box {
-    /* Pastikan skill box berada dalam satu baris */
-    white-space: nowrap; 
-    /* Diberi lebar yang sangat besar untuk menampung semua skill dan duplikatnya */
-    width: 200%; 
-    /* Gunakan flex-start dan andalkan margin untuk jarak 
-       Ini memastikan konsistensi lebar untuk loop yang mulus. */
-    justify-content: flex-start;
-    display: flex;
-
-    /* PERBAIKAN: Ubah durasi menjadi 40s agar sangat lambat dan halus */
-    animation: spin 20s infinite linear; 
-}
-
+    .skills-box div {
+        width: 180px;
+        height: 180px;
+        margin: 10px 15px;
+    }
     
     .skills-box div h2 {
-    color: var(--or);
-    font-size: 1.2em;
-    margin: 0;
-}
-
-.skill-tx {
-    text-align: center;
-    margin-top: 0px;
-    color: var(--warnaTeks);
-    font-size: 1.1em;
-    font-weight: bold;
-}
-
-.skills-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-@keyframes spin {
-    /* PERBAIKAN: Gunakan translate3d untuk akselerasi hardware (GPU) yang lebih halus */
-    from {
-        transform: translate3d(0, 0, 0);
+        color: var(--or);
+        font-size: 1.1em;
+        margin: 0;
     }
-    /* PERBAIKAN: Gunakan translate3d untuk akselerasi hardware (GPU) yang lebih halus */
-    to {
-        transform: translate3d(-50%, 0, 0);
+
+    .skill-tx {
+        text-align: center;
+        margin-top: 0px;
+        color: var(--warnaTeks);
+        font-size: 1em;
+        font-weight: bold;
+        padding: 0 10px;
     }
-}
 
+    .skills-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
 
+    @keyframes spin {
+        0% {
+            transform: translate3d(0, 0, 0);
+        }
+        100% {
+            transform: translate3d(-100%, 0, 0);
+        }
+    }
 
-
-    /* --- PROJECTS --- */
     .projects {
         padding: 40px 5%;
     }
 
-    /* FIX 2: Mengubah ke 1 kolom dan menghapus lebar fixed yang menyebabkan overflow */
     .bnykproject {
-        grid-template-columns: 1fr; /* NEW: 1 kolom penuh di mobile */
+        grid-template-columns: 1fr; 
         gap: 15px;
     }
     
@@ -919,14 +848,13 @@ footer {
         margin-left: 0;
     }
 
-    /* FLAW FIX: Hapus lebar fixed 240px dan biarkan grid bekerja */
     .bnykproject div {
         filter: grayscale(100%);
         transition-duration: 350ms;
         box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
-        height: auto; /* Ubah ke auto agar fleksibel */
-        width: 100%; /* NEW: Ambil lebar grid penuh (1fr) */
-        max-width: none; /* Pastikan tidak ada max-width lain yang mengganggu */
+        height: auto; 
+        width: 100%; 
+        max-width: none; 
     }
 
     .bnykproject div:hover {
@@ -934,15 +862,12 @@ footer {
     /* transform: translateY(-8px);    */
     }
     
-
-
-    /* --- CONTACT --- */
     .contact {
         padding: 40px 5% 20px 5%;
     }
     
     .contact-box {
-        flex-direction: column; /* Tumpuk info dan form secara vertikal */
+        flex-direction: column; 
         border-radius: 20px;
     }
     
@@ -955,7 +880,7 @@ footer {
     }
     
     .contact-form .half-width {
-        flex: 1 1 100%; /* Buat input nama dan email menjadi satu kolom penuh */
+        flex: 1 1 100%; 
     }
     
     .contact-info div {
